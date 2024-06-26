@@ -23,6 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 document.getElementById('nav-toggle').addEventListener('click', function() {
-    console.log("Click");
     document.getElementById('nav-links').classList.toggle('showing');
+});
+document.querySelectorAll('#nav-links a').forEach(item => {
+    item.addEventListener('click', () => {
+        document.getElementById('nav-links').classList.remove('showing');
+    });
 });
